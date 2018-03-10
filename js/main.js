@@ -15,7 +15,7 @@ var box4 = document.getElementById("q4");
 } */
 
 function storePI(){
-  public var pi = unscramble();
+  var pi = unscramble();
   box2.innerHTML = "<div>" + pi[0] + "</div>";
 }
 
