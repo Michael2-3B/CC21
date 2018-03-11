@@ -1,8 +1,8 @@
 var counter = document.getElementById("counter");
-var box1 = document.getElementById("q1");
-var box2 = document.getElementById("q2");
-var box3 = document.getElementById("q3");
-var box4 = document.getElementById("q4");
+var box1 = document.getElementById("b1");
+var box2 = document.getElementById("b2");
+var box3 = document.getElementById("b3");
+var box4 = document.getElementById("b4");
 
 //This function doesn't work, due to the way javascript handles PI and numbers in general
 /* function getDigit(i){
@@ -16,7 +16,7 @@ var box4 = document.getElementById("q4");
 
 function storePI(){
   var pi = unscramble();
-  box2.innerHTML = "<div>" + pi[0] + "</div>";
+  box2.innerHTML = pi[0];
 }
 
 function unscramble(){
