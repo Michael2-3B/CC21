@@ -4,16 +4,6 @@ var box2 = document.getElementById("b2");
 var box3 = document.getElementById("b3");
 var box4 = document.getElementById("b4");
 
-//This function doesn't work, due to the way javascript handles PI and numbers in general
-/* function getDigit(i){
-  var result;
-  if(i==1)
-    result = 3;
-  else
-    result = parseInt(Math.PI * (10 ** (i-1))) - parseInt(Math.PI * (10 ** (i-2))) * 10;
-  return result;
-} */
-
 function storePI(){
   var pi = unscramble();
   box2.innerHTML = pi[0];
@@ -28,6 +18,4 @@ for(R=0;R<256;R++)o=(o+a[R]+t.charCodeAt(R%t.length))%256,l=a[R],a[R]=a[o],a[o]=
 R=0,o=0
 for(var x=0;x<U.length;x++)o=(o+a[R=(R+1)%256])%256,l=a[R],a[R]=a[o],a[o]=l,m+=String.fromCharCode(U.charCodeAt(x)^a[(a[R]+a[o])%256])
 return m})(encrypted);
-
-    return converted;
 }
