@@ -1,5 +1,6 @@
 document.getElementById("start").onclick = (x => {
   document.getElementById("start").hidden = true;
+  
   var counter = document.getElementById("counter");
   var box1 = document.getElementById("q1");
   var box2 = document.getElementById("q2");
