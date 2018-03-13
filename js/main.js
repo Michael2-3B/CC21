@@ -3,10 +3,16 @@ var box1 = document.getElementById("b1");
 var box2 = document.getElementById("b2");
 var box3 = document.getElementById("b3");
 var box4 = document.getElementById("b4");
+var pi = unscramble();
 
-function storePI(){
-  var pi = unscramble();
-  box2.innerHTML = pi[0];
+var seed = 1;
+function random() {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
+
+function startGame(){
+  var trueBox = 1+Math.floor(random()*4);
 }
 
 function unscramble(){
