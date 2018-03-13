@@ -14,11 +14,6 @@ document.getElementById("start").onclick = (x => {
 
   var seed = 1;
 
-  function random() {
-    var x = Math.sin(seed++) * 10000;
-    return x - Math.floor(x);
-  }
-
   function newDigit() {
     boxArray.forEach((box,index)=>{
         box.onclick = function() {
@@ -30,11 +25,11 @@ document.getElementById("start").onclick = (x => {
             }
         }
         do {
-          box.innerText = Math.floor(random() * 10) + gameDigit?'':'.';
-        } while (box.innerText == pi[gameDigit]+gameDigit?'':'.');
+          box.innerText = Math.floor(Math.random() * 10) + gameDigit?'':'.';
+        } while (box.innerText == (pi[gameDigit]+gameDigit?'':'.'));
     });
 
-    trueBox = Math.floor(random() * 4);
+    trueBox = Math.floor(Math.random() * 4);
     theBox = boxArray[trueBox];
     theBox.innerHTML = pi[gameDigit] + gameDigit?'':'.';
   }
