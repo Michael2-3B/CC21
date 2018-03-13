@@ -1,4 +1,4 @@
-document.getElementById("start").onclick = (x => {
+function startGame(){
   document.getElementById("start").disabled = true;
   
   var counter = document.getElementById("counter");
@@ -56,4 +56,4 @@ document.getElementById("start").onclick = (x => {
 
     newDigit();
   })
-})();
+}
