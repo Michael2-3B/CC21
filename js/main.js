@@ -1,4 +1,5 @@
 var counter = document.getElementById("counter");
+var start = document.getElementById("start");
 var box1 = document.getElementById("b1");
 var box2 = document.getElementById("b2");
 var box3 = document.getElementById("b3");
@@ -24,7 +25,7 @@ function startGame(){
     box2.disabled = false;
     box3.disabled = false;
     box4.disabled = false;
-    document.getElementById("start").hidden = true;
+    start.hidden = true;
     
     newDigit();
 }
@@ -59,6 +60,8 @@ function newDigit(){
 }
     
 function button1(){
+    if(start.hidden = false)
+        startGame();
     if(trueBox == 0){
         gameDigit += 1;
         newDigit();
@@ -68,6 +71,8 @@ function button1(){
 }
     
 function button2(){
+    if(start.hidden = false)
+        startGame();
     if(trueBox == 1){
         gameDigit += 1;
         newDigit();
@@ -77,6 +82,8 @@ function button2(){
 }
     
 function button3(){
+    if(start.hidden = false)
+        startGame();
     if(trueBox == 2){
         gameDigit += 1;
         newDigit();
@@ -86,6 +93,8 @@ function button3(){
 }
     
 function button4(){
+    if(start.hidden = false)
+        startGame();
     if(trueBox == 3){
         gameDigit += 1;
         newDigit();
