@@ -4,10 +4,6 @@ var box1 = document.getElementById("b1");
 var box2 = document.getElementById("b2");
 var box3 = document.getElementById("b3");
 var box4 = document.getElementById("b4");
-box1.disabled = true;
-box2.disabled = true;
-box3.disabled = true;
-box4.disabled = true;
 
 var pi = unscramble();
 var trueBox;
@@ -21,10 +17,6 @@ function random() {
 }
 
 function startGame(){
-    box1.disabled = false;
-    box2.disabled = false;
-    box3.disabled = false;
-    box4.disabled = false;
     start.hidden = true;
     
     newDigit();
