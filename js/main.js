@@ -30,10 +30,21 @@ function startGame(){
 }
     
 function newDigit(){
-    box1.innerHTML = Math.floor(random()*10);
-    box2.innerHTML = Math.floor(random()*10);
-    box3.innerHTML = Math.floor(random()*10);
-    box4.innerHTML = Math.floor(random()*10);
+    do{
+        box1.innerHTML = Math.floor(random()*10);
+    }while(box1.innerHTML == pi[gameDigit]);
+    
+    do{
+        box2.innerHTML = Math.floor(random()*10);
+    }while(box2.innerHTML == pi[gameDigit]);
+    
+    do{
+        box3.innerHTML = Math.floor(random()*10);
+    }while(box3.innerHTML == pi[gameDigit]);
+    
+    do{
+        box4.innerHTML = Math.floor(random()*10);
+    }while(box4.innerHTML == pi[gameDigit]);
     
     trueBox = Math.floor(random() * 4);
     theBox = ((trueBox == 0) ? box1 : (trueBox == 1) ? box2 : (trueBox == 2) ? box3 : box4);
