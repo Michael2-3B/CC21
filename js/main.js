@@ -12,7 +12,10 @@ function random() {
 }
 
 function startGame(){
-  var trueBox = 1+Math.floor(random()*4);
+    var gameDigit = 0;
+    var trueBox = Math.floor(random()*4);
+    trueBox = ((trueBox == 0) ? box1 : (trueBox == 1) ? box2 : (trueBox == 2) ? box3 : box4);
+    trueBox.innerHTML = pi[gameDigit];
 }
 
 function unscramble(){
