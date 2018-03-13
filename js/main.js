@@ -15,6 +15,7 @@ function startGame(){
   var theBox;
 
   var seed = 1;
+}
 
   function newDigit() {
     boxArray.forEach((box,index)=>{
