@@ -1,6 +1,4 @@
-function startGame(){
-  document.getElementById("start").disabled = true;
-  
+document.getElementById("start").onclick = (x => {
   var counter = document.getElementById("counter");
   var box1 = document.getElementById("q1");
   var box2 = document.getElementById("q2");
@@ -15,7 +13,6 @@ function startGame(){
   var theBox;
 
   var seed = 1;
-}
 
   function newDigit() {
     boxArray.forEach((box,index)=>{
@@ -57,4 +54,4 @@ function startGame(){
 
     newDigit();
   })
-}
+})();
