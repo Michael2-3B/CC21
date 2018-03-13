@@ -1,4 +1,4 @@
-(x => {
+document.getElementById("start").onclick = (x => {
   var counter = document.getElementById("counter");
   var box1 = document.getElementById("b1");
   var box2 = document.getElementById("b2");
@@ -17,14 +17,6 @@
   function random() {
     var x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
-  }
-
-  function startGame() {
-    boxArray.map(box=>{box.disabled=false;return box});
-    document.getElementById("start")
-      .hidden = true;
-
-    newDigit();
   }
 
   function newDigit() {
@@ -60,4 +52,10 @@
       return m
     })(encrypted);
   }
+  return (function() {
+    boxArray.map(box=>{box.disabled=false;return box});
+    document.getElementById("start").hidden = true;
+
+    newDigit();
+  })
 })();
