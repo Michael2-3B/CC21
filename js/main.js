@@ -49,6 +49,13 @@ function newDigit(){
     trueBox = Math.floor(random() * 4);
     theBox = ((trueBox == 0) ? box1 : (trueBox == 1) ? box2 : (trueBox == 2) ? box3 : box4);
     theBox.innerHTML = pi[gameDigit];
+    
+    if(gameDigit == 0){
+        box1.innerHTML += ".";
+        box2.innerHTML += ".";
+        box3.innerHTML += ".";
+        box4.innerHTML += ".";
+    }
 }
     
 function button1(){
