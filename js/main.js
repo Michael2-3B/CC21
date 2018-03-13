@@ -1,9 +1,9 @@
 document.getElementById("start").onclick = (x => {
   var counter = document.getElementById("counter");
-  var box1 = document.getElementById("b1");
-  var box2 = document.getElementById("b2");
-  var box3 = document.getElementById("b3");
-  var box4 = document.getElementById("b4");
+  var box1 = document.getElementById("q1");
+  var box2 = document.getElementById("q2");
+  var box3 = document.getElementById("q3");
+  var box4 = document.getElementById("q4");
   var boxArray = [box1, box2, box3, box4];
   boxArray.map(box=>{box.disabled=true;return box});
 
