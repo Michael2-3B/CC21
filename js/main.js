@@ -3,7 +3,15 @@ var box1 = document.getElementById("b1");
 var box2 = document.getElementById("b2");
 var box3 = document.getElementById("b3");
 var box4 = document.getElementById("b4");
+box1.disabled = true;
+box2.disabled = true;
+box3.disabled = true;
+box4.disabled = true;
+
 var pi = unscramble();
+var trueBox;
+var gameDigit;
+var theBox;
 
 var seed = 1;
 function random() {
@@ -12,10 +20,61 @@ function random() {
 }
 
 function startGame(){
-    var gameDigit = 0;
-    var trueBox = Math.floor(random()*4);
-    trueBox = ((trueBox == 0) ? box1 : (trueBox == 1) ? box2 : (trueBox == 2) ? box3 : box4);
-    trueBox.innerHTML = pi[gameDigit];
+    box1.disabled = false;
+    box2.disabled = false;
+    box3.disabled = false;
+    box4.disabled = false;
+    document.getElementById("start").hidden = true;
+    
+    gameDigit = 0;
+    newDigit();
+}
+    
+function newDigit(){
+    box1.innerHTML = Math.floor(random()*10);
+    box2.innerHTML = Math.floor(random()*10);
+    box3.innerHTML = Math.floor(random()*10);
+    box4.innerHTML = Math.floor(random()*10);
+    
+    trueBox = Math.floor(random() * 4);
+    theBox = ((trueBox == 0) ? box1 : (trueBox == 1) ? box2 : (trueBox == 2) ? box3 : box4);
+    theBox.innerHTML = pi[gameDigit];
+}
+    
+function button1(){
+    if(trueBox == 0){
+        gameDigit++;
+        newDigit();
+    }
+    else
+        location.reload();
+}
+    
+function button2(){
+    if(trueBox == 1){
+        gameDigit++;
+        newDigit();
+    }
+    else
+        location.reload();
+}
+    
+function button3(){
+    if(trueBox == 2){
+        gameDigit++;
+        newDigit();
+    }
+    else
+        location.reload();
+}
+    
+function button4(){
+    if(trueBox == 3){
+        gameDigit++;
+        newDigit();
+    }
+    else
+        location.reload();
 }
 
 function unscramble(){
