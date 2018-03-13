@@ -29,7 +29,7 @@ body {
     float:left;
 }
 
-button #main-button {
+.main-button {
 	cursor: pointer;
 	font-size: 72px;
 	text-align: right;
