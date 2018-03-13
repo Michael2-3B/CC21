@@ -25,7 +25,7 @@ document.getElementById("start").onclick = (x => {
             }
         }
         do {
-          box.innerText = Math.floor(Math.random() * 10) + gameDigit?'':'.';
+          box.innerText = Math.floor(Math.random() * 10) + (gameDigit?'':'.');
         } while (box.innerText == (pi[gameDigit]+gameDigit?'':'.'));
     });
 
