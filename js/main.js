@@ -10,7 +10,7 @@ box4.disabled = true;
 
 var pi = unscramble();
 var trueBox;
-var gameDigit;
+var gameDigit = 0;
 var theBox;
 
 var seed = 1;
@@ -26,7 +26,6 @@ function startGame(){
     box4.disabled = false;
     document.getElementById("start").hidden = true;
     
-    gameDigit = 0;
     newDigit();
 }
     
@@ -43,7 +42,7 @@ function newDigit(){
     
 function button1(){
     if(trueBox == 0){
-        gameDigit++;
+        gameDigit += 1;
         newDigit();
     }
     else
@@ -52,7 +51,7 @@ function button1(){
     
 function button2(){
     if(trueBox == 1){
-        gameDigit++;
+        gameDigit += 1;
         newDigit();
     }
     else
@@ -61,7 +60,7 @@ function button2(){
     
 function button3(){
     if(trueBox == 2){
-        gameDigit++;
+        gameDigit += 1;
         newDigit();
     }
     else
@@ -70,7 +69,7 @@ function button3(){
     
 function button4(){
     if(trueBox == 3){
-        gameDigit++;
+        gameDigit += 1;
         newDigit();
     }
     else
