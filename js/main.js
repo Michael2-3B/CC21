@@ -50,8 +50,7 @@ document.getElementById("start").onclick = (x => {
   }
   return (function() {
     boxArray.map(box=>{box.disabled=false;return box});
-    document.getElementById("start").hidden = true;
-
+    document.getElementById("start").style.display = "none";
     newDigit();
   })
 })();
