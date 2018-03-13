@@ -31,7 +31,7 @@ document.getElementById("start").onclick = (x => {
 
     trueBox = Math.floor(Math.random() * 4);
     theBox = boxArray[trueBox];
-    theBox.innerHTML = pi[gameDigit] + gameDigit?'':'.';
+    theBox.innerHTML = pi[gameDigit] + (gameDigit?'':'.');
   }
 
 
