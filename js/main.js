@@ -24,7 +24,7 @@ document.getElementById("start").onclick = (x => {
         box.onclick = function() {
             if (trueBox == index) {
               counter.innerHTML = "Score: " + gameDigit;
-              dd.innerHTML += pi[gameDigit];
+              dd.innerHTML += theBox.innerHTML;
               gameDigit += 1;
               newDigit();
             } else {
