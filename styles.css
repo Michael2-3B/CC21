@@ -41,19 +41,32 @@ body {
 }
 
 #q1 {
-	background-color: red;
+	background-color: #FF0000;
 }
 
 #q2 {
-	background-color: blue;
+	background-color: #00AAFF;
 }
 
 #q3 {
-	background-color: orange;
+	background-color: #FFAA00;
 }
 
 #q4 {
-	background-color: green;
+	background-color: #00CC00;
+}
+
+#q1:hover{
+	background-color: #DD0000;
+}
+#q2:hover{
+	background-color: #0088FF;
+}
+#q3:hover{
+	background-color: #FF8800;
+}
+#q4:hover{
+	background-color: #00AA00;
 }
 
 #start{
