@@ -20,6 +20,7 @@ document.getElementById("start").onclick = (x => {
             if (trueBox == index) {
               gameDigit += 1;
               newDigit();
+              counter.innerHTML = "Score: " + gameDigit;
             } else {
               location.reload();
             }
