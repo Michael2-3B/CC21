@@ -23,9 +23,9 @@ document.getElementById("start").onclick = (x => {
     boxArray.forEach((box,index)=>{
         box.onclick = function() {
             if (trueBox == index) {
+              gameDigit += 1;
               counter.innerHTML = "Score: " + gameDigit;
               dd.innerHTML += theBox.innerHTML;
-              gameDigit += 1;
               newDigit();
             } else {
               alert("Game Over! Your Score Was: " + gameDigit);
