@@ -6,6 +6,7 @@ html,body {
 
 body {
 	font-family: "Courier New";
+	background-color: springgreen;
 	color: black;
 }
 
@@ -15,9 +16,6 @@ body {
 	font-family: "Times";
 }
 
-.topbar h1 {
-	
-}
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes headerWheel {
     0%  {background-color:orange;}
@@ -101,4 +99,12 @@ body {
 	-webkit-animation-name: headerWheel; /* Safari 4.0 - 8.0 */
     	-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     	-webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+}
+
+#digitDisplay{
+	border: solid;
+	width:float;
+	height:float;
+	font-size: 20px;
+	font-family: "Courier New";
 }
