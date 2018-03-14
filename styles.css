@@ -18,6 +18,23 @@ body {
 .topbar h1 {
 	
 }
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes headerWheel {
+    0%  {background-color:orange;}
+    25%  {background-color:yellow;}
+    50% {background-color:lightblue;}
+    75% {background-color: springgreen;}
+    100% {background-color:violet;}
+}
+
+/* Standard syntax */
+@keyframes headerWheel {
+    0%  {background-color:orange;}
+    25%  {background-color:yellow;}
+    50% {background-color:lightblue;}
+    75% {background-color: springgreen;}
+    100% {background-color:violet;}
+}
 
 .row {
     width:100%;
@@ -70,9 +87,18 @@ body {
 }
 
 #start{
+	background-color: orange;
 	cursor: pointer;
 	font-size: 30px;
 	display: block;
 	width: 100%;
 	height: 100px;
+}
+#start:hover{
+	animation-name: headerWheel;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: headerWheel; /* Safari 4.0 - 8.0 */
+    	-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    	-webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
 }
