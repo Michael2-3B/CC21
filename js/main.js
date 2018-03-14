@@ -1,5 +1,9 @@
 document.getElementById("start").onclick = (x => {
   var counter = document.getElementById("counter");
+  if(localStorage.getItem("high")){
+    var highscore = Number(localStorage.getItem("high"));
+    counter.innerHTML += " Highscore: " + highscore;
+  }
   var box1 = document.getElementById("q1");
   var box2 = document.getElementById("q2");
   var box3 = document.getElementById("q3");
@@ -23,6 +27,8 @@ document.getElementById("start").onclick = (x => {
               counter.innerHTML = "Score: " + gameDigit;
             } else {
               alert("Game Over! Your Score Was: " + gameDigit);
+              if(gameDigit > Number(localStorage.getItem("high")))
+                localStorage.setItem("high",gameDigit);
               location.reload();
             }
         }
@@ -53,6 +59,8 @@ document.getElementById("start").onclick = (x => {
   return (function() {
     boxArray.map(box=>{box.disabled=false;return box});
     document.getElementById("start").style.display = "none";
+    if(!localStorage.getItem("high"))
+      localStorage.setItem("high",0);
     newDigit();
   })
 })();
