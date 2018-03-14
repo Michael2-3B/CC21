@@ -22,6 +22,7 @@ document.getElementById("start").onclick = (x => {
               newDigit();
               counter.innerHTML = "Score: " + gameDigit;
             } else {
+              alert("Game Over! Your Score Was: " + gameDigit);
               location.reload();
             }
         }
