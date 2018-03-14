@@ -4,6 +4,7 @@ document.getElementById("start").onclick = (x => {
     var highscore = Number(localStorage.getItem("high"));
     counter.innerHTML += " Highscore: " + highscore;
   }
+  var dd = document.getElementById("digitDisplay");
   var box1 = document.getElementById("q1");
   var box2 = document.getElementById("q2");
   var box3 = document.getElementById("q3");
@@ -22,9 +23,10 @@ document.getElementById("start").onclick = (x => {
     boxArray.forEach((box,index)=>{
         box.onclick = function() {
             if (trueBox == index) {
+              counter.innerHTML = "Score: " + gameDigit;
+              dd.innerHTML += pi[gameDigit];
               gameDigit += 1;
               newDigit();
-              counter.innerHTML = "Score: " + gameDigit;
             } else {
               alert("Game Over! Your Score Was: " + gameDigit);
               if(gameDigit > Number(localStorage.getItem("high")))
