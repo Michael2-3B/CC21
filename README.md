@@ -5,6 +5,8 @@ The goal of the game is to see how many digits of pi you can remember (by heart)
 
 See the cemetech thread here: http://cemete.ch/p269038
 
+
 Credits:
-  Michael2_3B for the idea and most of the code
+  Michael2_3B for the idea and most of the code;
+  
   _iPhoenix_ for some styling help and javascript security
