@@ -36,7 +36,7 @@ document.getElementById("start").onclick = (x => {
         }
         do {
           box.innerText = Math.floor(Math.random() * 10);
-        } while (box.innerText == pi[gameDigit]);
+        } while (box.innerText == pi[gameDigit] || box.innerText == boxArray[0].innerText || box.innerText == boxArray[1].innerText || box.innerText == boxArray[2].innerText || box.innerText == boxArray[3].innerText);
         box.innerText += gameDigit?'':'.';
     });
 
