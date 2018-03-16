@@ -20,6 +20,7 @@ document.getElementById("start").onclick = (x => {
   var seed = 1;
 
   function newDigit() {
+    // Create an empty list, eventually for storing used digits.
     var usedList = [];
     boxArray.forEach((box,index)=>{
         box.onclick = function() {
