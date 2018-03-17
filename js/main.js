@@ -20,6 +20,8 @@ document.getElementById("start").onclick = (x => {
   var seed = 1;
 
   function newDigit() {
+    // Create an empty list, eventually for storing used digits.
+    var usedList = [];
     boxArray.forEach((box,index)=>{
         box.onclick = function() {
             if (trueBox == index) {
@@ -36,7 +38,9 @@ document.getElementById("start").onclick = (x => {
         }
         do {
           box.innerText = Math.floor(Math.random() * 10);
-        } while (box.innerText == pi[gameDigit]);
+        } while (box.innerText == pi[gameDigit] && usedList.indexOf(box.innerText) == -1); //If the digit is not in the list, and it is not the digit of pi we are looking for.
+        //push it to the list, marking it as used.
+        usedList.push(box.innerText);
         box.innerText += gameDigit?'':'.';
     });
 
