@@ -38,7 +38,7 @@ document.getElementById("start").onclick = (x => {
         }
         do {
           box.innerText = Math.floor(Math.random() * 10);
-        } while (box.innerText == pi[gameDigit] && usedList.indexOf(box.innerText) == -1); //If the digit is not in the list, and it is not the digit of pi we are looking for.
+        } while (box.innerText == pi[gameDigit] || usedList.indexOf(box.innerText) >= 0); //If the digit is not in the list, and it is not the digit of pi we are looking for.
         //push it to the list, marking it as used.
         usedList.push(box.innerText);
         box.innerText += gameDigit?'':'.';
