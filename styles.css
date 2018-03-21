@@ -45,6 +45,7 @@ body {
 }
 
 .main-button {
+	border: none;
 	cursor: pointer;
 	font-size: 72px;
 	text-align: center;
